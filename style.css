@@ -256,11 +256,11 @@ footer {
 }
 
 .testimonial-arrow.prev {
-  left: -35px; /* Move left arrow outside the carousel */
+  left: -55px; /* Move left arrow outside the carousel */
 }
 
 .testimonial-arrow.next {
-  right: -35px; /* Move right arrow outside the carousel */
+  right: -55px; /* Move right arrow outside the carousel */
 }
 
 .testimonial-arrow:hover {
