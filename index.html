@@ -124,17 +124,16 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
-<div class="testimonial-carousel">
-  <div class="testimonial active"> <!-- ONLY THIS ONE HAS 'active' -->
-    <p>“...”</p>
-    <span>— Name</span>
-  </div>
-  <div class="testimonial">
-    <p>“...”</p>
-    <span>— Name</span>
-  </div>
-  ...
-</div>
+<script>
+  const testimonials = document.querySelectorAll('.testimonial');
+  let index = 0;
+
+  setInterval(() => {
+    testimonials[index].classList.remove('active');
+    index = (index + 1) % testimonials.length;
+    testimonials[index].classList.add('active');
+  }, 5000);
+</script>
 
 </body>
 </html>
