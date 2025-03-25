@@ -189,7 +189,20 @@ footer {
 .testimonial-carousel {
   position: relative;
   min-height: 200px;
-  padding: 1rem 2rem; /* Add padding so arrows don’t overlap text */
+  padding: 1rem 2rem; /* Add padding to avoid overlap with arrows */
+}
+
+.testimonial {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  width: 100%;
+}
+
+.testimonial.active {
+  display: block;
+  opacity: 1;
 }
 
 .testimonial-arrow {
@@ -208,11 +221,11 @@ footer {
 }
 
 .testimonial-arrow.prev {
-  left: 10px; /* Move arrows slightly inside */
+  left: 10px; /* Move the arrow slightly inside */
 }
 
 .testimonial-arrow.next {
-  right: 10px; /* Move arrows slightly inside */
+  right: 10px; /* Move the arrow slightly inside */
 }
 
 .testimonial-arrow:hover {
