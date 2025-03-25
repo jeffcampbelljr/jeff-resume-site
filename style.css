@@ -221,11 +221,11 @@ footer {
 }
 
 .testimonial-arrow.prev {
-  left: -25px; /* Move the arrow slightly outside */
+  left: -35px; /* Move the arrow slightly outside */
 }
 
 .testimonial-arrow.next {
-  right: -25px; /* Move the arrow slightly outside */
+  right: -35px; /* Move the arrow slightly outside */
 }
 
 .testimonial-arrow:hover {
