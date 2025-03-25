@@ -49,35 +49,40 @@
 <section class="testimonials" data-aos="fade-up" style="max-width: 800px; margin: 0 auto;">
   <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: red;">What Others Say</h2>
   <div class="testimonial-carousel">
-    <div class="testimonial active">
-      <p>“Jeff was instrumental in launching our sales and partner teams across multiple companies. His strategic thinking, problem-solving, and ability to build repeatable systems made him an invaluable asset to both AmeriCommerce and Cart.com.”</p>
-      <span>— Ed Sturrock, CEO, AmeriCommerce / CTO, Cart.com</span>
-    </div>
-    <div class="testimonial">
-      <p>“Jeff has a commitment to deliver results with both partners and customers — always with integrity and empathy. He’s technically sharp and genuinely great to work with.”</p>
-      <span>— Scott Staupe, VP of Alliances, RELEX Solutions</span>
-    </div>
-    <div class="testimonial">
-      <p>“Jeff has deep expertise in commerce platforms and integrations. He’s a strong team player who knows how to translate technical knowledge into real partner solutions.”</p>
-      <span>— Jordan Donahue, Field Partner Sales Manager, Adobe</span>
-    </div>
-    <div class="testimonial">
-      <p>“Jeff helped scale our PayPal partnership and led the GTM work with Attentive — two highly complex, cross-functional initiatives. He bridges technical and commercial strategy like few others can.”</p>
-      <span>— Laura Colagrande, Enterprise Partnerships, Bloomreach</span>
-    </div>
-    <div class="testimonial">
-      <p>“Jeff has strong technical acumen and deep eCommerce knowledge. He consistently went above and beyond — offering creative solutions and connecting people with the right partners.”</p>
-      <span>— Ian Leslie, Senior Director, Pipe17</span>
-    </div>
-    <div class="testimonial">
-      <p>“Jeff is an informed consultant more than a salesman — a rare talent who listens, guides, and delivers. His insights and customer-first mindset make him an asset to any team.”</p>
-      <span>— Lance LaRue, President, 5 Under Golf (formerly Capital One)</span>
-    </div>
-    <div class="testimonial">
-      <p>“Jeff is as hardworking as they come and extremely intelligent in his approach to both sales and partnerships. He dives into the details, communicates up effectively, and any company would be lucky to have him.”</p>
-      <span>— Jack Cravy, VP, Cart.com</span>
-    </div>
+  <div class="testimonial active">
+    <p>“Jeff was instrumental in launching our sales and partner teams across multiple companies. His strategic thinking, problem-solving, and ability to build repeatable systems made him an invaluable asset to both AmeriCommerce and Cart.com.”</p>
+    <span>— Ed Sturrock, CEO, AmeriCommerce / CTO, Cart.com</span>
   </div>
+  <div class="testimonial">
+    <p>“Jeff has a commitment to deliver results with both partners and customers — always with integrity and empathy. He’s technically sharp and genuinely great to work with.”</p>
+    <span>— Scott Staupe, VP of Alliances, RELEX Solutions</span>
+  </div>
+  <div class="testimonial">
+    <p>“Jeff has deep expertise in commerce platforms and integrations. He’s a strong team player who knows how to translate technical knowledge into real partner solutions.”</p>
+    <span>— Jordan Donahue, Field Partner Sales Manager, Adobe</span>
+  </div>
+  <div class="testimonial">
+    <p>“Jeff helped scale our PayPal partnership and led the GTM work with Attentive — two highly complex, cross-functional initiatives. He bridges technical and commercial strategy like few others can.”</p>
+    <span>— Laura Colagrande, Enterprise Partnerships, Bloomreach</span>
+  </div>
+  <div class="testimonial">
+    <p>“Jeff has strong technical acumen and deep eCommerce knowledge. He consistently went above and beyond — offering creative solutions and connecting people with the right partners.”</p>
+    <span>— Ian Leslie, Senior Director, Pipe17</span>
+  </div>
+  <div class="testimonial">
+    <p>“Jeff is an informed consultant more than a salesman — a rare talent who listens, guides, and delivers. His insights and customer-first mindset make him an asset to any team.”</p>
+    <span>— Lance LaRue, President, 5 Under Golf (formerly Capital One)</span>
+  </div>
+  <div class="testimonial">
+    <p>“Jeff is as hardworking as they come and extremely intelligent in his approach to both sales and partnerships. He dives into the details, communicates up effectively, and any company would be lucky to have him.”</p>
+    <span>— Jack Cravy, VP, Cart.com</span>
+  </div>
+
+  <!-- Arrow Controls -->
+  <button class="testimonial-arrow prev">&#8592;</button>
+  <button class="testimonial-arrow next">&#8594;</button>
+</div>
+
 </section>
     <section class="values" data-aos="fade-up">
     <h2>What I Believe</h2>
@@ -118,14 +123,31 @@
   <script>AOS.init();</script>
 <script>
   const testimonials = document.querySelectorAll('.testimonial');
+  const nextBtn = document.querySelector('.testimonial-arrow.next');
+  const prevBtn = document.querySelector('.testimonial-arrow.prev');
   let index = 0;
 
-  setInterval(() => {
-    testimonials[index].classList.remove('active');
+  function showTestimonial(i) {
+    testimonials.forEach(t => t.classList.remove('active'));
+    testimonials[i].classList.add('active');
+  }
+
+  function nextTestimonial() {
     index = (index + 1) % testimonials.length;
-    testimonials[index].classList.add('active');
-  }, 5000);
+    showTestimonial(index);
+  }
+
+  function prevTestimonial() {
+    index = (index - 1 + testimonials.length) % testimonials.length;
+    showTestimonial(index);
+  }
+
+  nextBtn.addEventListener('click', nextTestimonial);
+  prevBtn.addEventListener('click', prevTestimonial);
+
+  setInterval(nextTestimonial, 5000); // Auto-rotate
 </script>
+
 
 </body>
 </html>
