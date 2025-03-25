@@ -189,7 +189,7 @@ footer {
 .testimonial-carousel {
   position: relative;
   min-height: 200px;
-  padding: 1rem 2rem; /* Add padding to avoid overlap with arrows */
+  padding: 1rem; /* Add padding to avoid overlap with arrows */
 }
 
 .testimonial {
@@ -213,23 +213,54 @@ footer {
   color: white;
   border: none;
   font-size: 1.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   cursor: pointer;
   z-index: 10;
-  border-radius: 4px;
+  border-radius: 50%;
   opacity: 0.8;
 }
 
 .testimonial-arrow.prev {
-  left: -35px; /* Move the arrow slightly outside */
+  left: -35px; /* Move left arrow outside the carousel */
 }
 
 .testimonial-arrow.next {
-  right: -35px; /* Move the arrow slightly outside */
+  right: -35px; /* Move right arrow outside the carousel */
 }
 
 .testimonial-arrow:hover {
   opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .testimonial-carousel {
+    padding: 1rem;
+  }
+
+  .testimonial-arrow {
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .testimonial {
+    font-size: 1rem;  /* Smaller text on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-carousel {
+    padding: 0.5rem;
+  }
+
+  .testimonial-arrow {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .testimonial {
+    font-size: 0.9rem;  /* Even smaller text for very small screens */
+  }
 }
 
 
