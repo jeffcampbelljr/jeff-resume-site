@@ -224,7 +224,7 @@ footer {
 .testimonial-carousel {
   position: relative;
   min-height: 200px;
-  padding: 1rem; /* Add padding to avoid overlap with arrows */
+  padding: 1rem 2rem; /* Add padding to avoid overlap with arrows */
 }
 
 .testimonial {
