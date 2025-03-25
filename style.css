@@ -185,32 +185,6 @@ footer {
   padding: 1.5rem;
   font-size: 0.9rem;
 }
-
-/* Responsive */
-@media (max-width: 600px) {
-  .profile-pic {
-    width: 100px;
-    height: 100px;
-  }
-
-  .chapter h2,
-  .testimonials h2,
-  .values h2,
-  .contact h2,
-  .logos h2,
-  .companies h2 {
-    font-size: 1.5rem;
-  }
-
-  .cta-button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-  }
-
-  .logo-grid img {
-    width: 80px;
-  }
-
 /* Testimonial */  
 .testimonial-carousel {
   position: relative;
@@ -256,6 +230,33 @@ footer {
 .testimonial-arrow:hover {
   opacity: 1;
 }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  .chapter h2,
+  .testimonials h2,
+  .values h2,
+  .contact h2,
+  .logos h2,
+  .companies h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .logo-grid img {
+    width: 80px;
+  }
+
+
 
 
 }
