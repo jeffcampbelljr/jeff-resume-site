@@ -70,43 +70,6 @@ h1 {
   margin: 1rem auto 0;
 }
 
-/* Testimonials */
-
-.testimonial-carousel {
-  position: relative;
-  min-height: 180px;
-}
-
-.testimonial {
-  display: none;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  position: absolute;
-  width: 100%;
-}
-
-.testimonial.active {
-  display: block;
-  opacity: 1;
-}
-
-.quote {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  border-left: 4px solid red;
-  background: #f3f3f3;
-  text-align: left;
-  font-style: italic;
-  color: #333;
-}
-
-.quote span {
-  display: block;
-  margin-top: 1rem;
-  font-weight: bold;
-  color: #000;
-}
 
 /* Logos Section */
 .logos,
@@ -247,4 +210,24 @@ footer {
   .logo-grid img {
     width: 80px;
   }
+
+/* Testimonial */  
+  .testimonial-carousel {
+  position: relative;
+  min-height: 180px;
+}
+
+.testimonial {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  width: 100%;
+}
+
+.testimonial.active {
+  display: block;
+  opacity: 1;
+}
+
 }
