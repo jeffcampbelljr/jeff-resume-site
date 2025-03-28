@@ -297,7 +297,15 @@ footer {
     font-size: 0.9rem;  /* Even smaller text for very small screens */
   }
 }
+@media (max-width: 768px) {
+  .testimonial-arrow.prev {
+    left: 10px;
+  }
 
+  .testimonial-arrow.next {
+    right: 10px;
+  }
+}
 
 /* Responsive */
 @media (max-width: 600px) {
