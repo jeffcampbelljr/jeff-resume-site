@@ -267,19 +267,20 @@ footer {
   opacity: 1;
 }
 
-/* Responsive adjustments */
+/* Mobile (move arrows below content) */
 @media (max-width: 768px) {
-  .testimonial-carousel {
-    padding: 1rem;
+  .testimonial-nav {
+    position: static;
+    transform: none;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
   }
 
   .testimonial-arrow {
+    position: static;
     font-size: 1.25rem;
     padding: 0.5rem 1rem;
-  }
-  
-  .testimonial {
-    font-size: 1rem;  /* Smaller text on mobile */
   }
 }
 
